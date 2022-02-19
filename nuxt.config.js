@@ -100,16 +100,13 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'http://localhost:3000/api/v1'
+    baseURL: process.env.BASE_URL || 'http://localhost:3000/api/v1'
   },
   /*
    ** Build configuration
    */
   build: {
-    transpile: [
-      /^vue2-google-maps($|\/)/,
-      'vee-validate'
-    ],
+    transpile: [/^vue2-google-maps($|\/)/, 'vee-validate'],
     /*
      ** You can extend webpack config here
      */
@@ -135,13 +132,11 @@ export default {
   Because / is from the root folder of the whole computer
   While ./ will access the same level of directory and stuf :D
   */
-  router: {
-  },
+  router: {},
   server: {
     port: process.env.PORT || 3333, // default: 3000
     host: process.env.HOST || '127.0.0.1', // default: localhost,
     timing: false
   },
-  generate: {
-  }
+  generate: {}
 }
