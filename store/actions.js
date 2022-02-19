@@ -2,7 +2,8 @@ const cookieparser = require('cookieparser')
 const Cookie = require('js-cookie')
 export default {
   async nuxtServerInit({ commit }, { req }) {
-    if (req.headers.cookie) {
+    // console.log('req :>> ', req.headers)
+    if (req?.headers?.cookie) {
       const parsed = cookieparser.parse(req.headers.cookie)
       try {
         const token = parsed.token
