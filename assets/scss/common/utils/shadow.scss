@@ -1,0 +1,19 @@
+$shadow-light: 0 1px 5px rgba(0, 0, 0, 0.15);
+$shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+$shadow-bottom:0 5px 5px -5px rgba(0, 0, 0, 0.3);
+$shadow-right: 5px 0 5px -5px  rgba(0, 0, 0, 0.3);
+$shadow-top: 0 -5px 5px -5px  rgba(0, 0, 0, 0.3);
+$shadow-dark: 0 1px 5px rgba(0, 0, 0, 0.5);
+$shadow-darker: 0 1px 5px rgba(0, 0, 0, 0.7);
+.box-shadow {
+  box-shadow: $shadow;
+}
+.box-shadow-top {
+  box-shadow: $shadow-top;
+}
+.box-shadow-bottom {
+  box-shadow: $shadow-bottom;
+}
+.box-shadow-dark {
+  box-shadow: $shadow-dark;
+}
