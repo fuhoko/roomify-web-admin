@@ -151,10 +151,12 @@ export default {
             // Save token in state for other uses
             this.notifyToast('success', 'Success', 'Login successfully')
             this.$store.commit('user/SET_TOKEN', loginResponse.data.token)
+            console.log('!!!!', this.$store.state.user.token)
             this.$store.commit('user/SET_USER', userResponse.data)
             this.$router.push('/users')
           } else {
             this.notifyToast('error', 'Error', 'Not enough permission')
+            this.processing = false
           }
         } else {
           this.notifyToast('error', 'Error', 'Your account is banned')
