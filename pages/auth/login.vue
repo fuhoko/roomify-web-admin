@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import Cookie from 'js-cookie'
+// import Cookie from 'js-cookie'
 export default {
   middleware: 'AdminAuthNotRequired',
   components: {},
@@ -145,8 +145,12 @@ export default {
             userResponse.data.role == 'ADMIN' ||
             userResponse.data.role == 'MODERATOR'
           ) {
-            Cookie.set('token', loginResponse.data.token, {
-              expires: 1
+            // Cookie.set('token', loginResponse.data.token, {
+            //   expires: 1
+            // })
+            this.$cookies.set('token', loginResponse.data.token, {
+              path: '/',
+              maxAge: 60 * 60 * 24 * 7
             })
             // Save token in state for other uses
             this.notifyToast('success', 'Success', 'Login successfully')

@@ -93,7 +93,8 @@ export default {
         ]
       }
     ],
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'cookie-universal-nuxt'
   ],
   /*
    ** Axios module configuration

@@ -218,7 +218,7 @@ export default {
     query: (state) => state.user.query
   }),
   created() {
-    console.log('!!!!123', this.$store.state.user.token)
+    console.log('!!!!123', this.$store.state.user.currentUser)
     this.$bus.$emit('title', 'List user')
     //this.token = Cookie.get('token')
   },
