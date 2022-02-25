@@ -17,6 +17,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  target: 'static',
   /*
    ** Customize the progress-bar color
    */
@@ -133,7 +134,9 @@ export default {
   Because / is from the root folder of the whole computer
   While ./ will access the same level of directory and stuf :D
   */
-  router: {},
+  router: {
+    middleware: ['AdminAuthRequired']
+  },
   server: {
     port: process.env.PORT || 3333, // default: 3000
     host: process.env.HOST || '127.0.0.1', // default: localhost,
